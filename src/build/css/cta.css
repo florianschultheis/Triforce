@@ -1,0 +1,76 @@
+section.cta {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  
+
+  background: url("/assets/vendor/img/bg-cta.png"), #009fe3;
+  /* fallback for old browsers */
+  background: url("/assets/vendor/img/bg-cta.png"), -webkit-linear-gradient(to left, #87c8e3 30%, #009fe3); 
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: url("/assets/vendor/img/bg-cta.png"), linear-gradient(to left, #87c8e3 30%, #009fe3);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-position: center;
+
+
+  padding: 460px 0; /*Malte 23.11.2017 Padding vorher 200*/
+  width: 100%; /*Malte 23.11.2017*/
+  background-repeat: no-repeat; /*Malte 23.11.2017*/
+  background-size: contain; /*Malte 23.11.2017*/
+} 
+
+
+
+/* For width 550px and larger: Malte */ 
+@media (max-width: 700px) {
+  section.cta {
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    
+
+    background: url("/assets/vendor/img/bg-cta_mini.png"), #009fe3;
+    /* fallback for old browsers */
+    background: url("/assets/vendor/img/bg-cta_mini.png"), -webkit-linear-gradient(to left, #87c8e3 30%, #009fe3); /*#87c8e3
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: url("/assets/vendor/img/bg-cta_mini.png"), linear-gradient(to left, #87c8e3 30%, #009fe3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-position: center;
+
+    padding: 1000px 0;
+    width: 100%; /*Malte 23.11.2017*/
+    background-repeat: no-repeat; /*Malte 23.11.2017*/
+    background-size: contain; /*Malte 23.11.2017*/
+    padding-top: 300px;
+  }
+}
+section.cta .cta-content {
+  position: relative;
+  z-index: 1;
+}
+section.cta .cta-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+  max-width: 450px;
+  font-size: 25px;
+}
+@media (min-width: 768px) {
+  section.cta .cta-content h2 {
+    font-size: 35px;
+  }
+}
+section.cta .overlay {
+  height: 100%;
+  width: 100%;
+/* background-color: rgba(0, 0, 0, 0.5); Malte 23.11.2017 Nebel weg*/ 
+ position: absolute;
+  top: 0;
+  left: 0;
+}

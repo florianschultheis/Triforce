@@ -1,0 +1,9 @@
+//ffried, 24.11.17
+
+1.) Eingabeaufforderung �ffnen und mithilfe des "cd"-Befehls auf den Pfad in dem das Programm liegt, zeigen.
+2.) Mit dem Befehl "npm install" die sog. NodeModules installieren. Der Vorgang kann einige Minuten dauern.
+3.) Mit dem Befehl "ng serve" den Webserver starten. Der Befehl wird laden und nach kurzer Zeit fehlschlagen.
+4.) �ber den Explorer Datei \src\app\app.module.ts zB. mit dem Editor �ffnen.
+5.) Beliebiges Zeichen aus dem File entfernen, mit Strg+S speichern. In der Eingabeaufforderung wird erneut kompiliert, der Vorgang wird erneut fehlschlagen.
+6.) Das in Schritt 5 entfernte Zeichen wieder einsetzen, erneut speichern. Es wird erneut kompiliert, diesmal erfolgreich.
+7.) �ber einen Webbrowser kann nun (Standardm�ssig �ber localhost:4200) die Website aufgeruf
