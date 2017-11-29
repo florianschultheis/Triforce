@@ -7,3 +7,4 @@
 5.) Beliebiges Zeichen aus dem File entfernen, mit Strg+S speichern. In der Eingabeaufforderung wird erneut kompiliert, der Vorgang wird erneut fehlschlagen.
 6.) Das in Schritt 5 entfernte Zeichen wieder einsetzen, erneut speichern. Es wird erneut kompiliert, diesmal erfolgreich.
 7.) Ueber einen Webbrowser kann nun (Standardmaessig ueber localhost:4200) die Website aufgerufen werden.
+8.) FERTIG!
