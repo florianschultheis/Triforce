@@ -101,3 +101,7 @@
     -webkit-text-fill-color: transparent;
   }
 }
+/*Malte 29.11.2017 cursorchange to pointer*/
+.cursorchange{
+  cursor:pointer;
+}
