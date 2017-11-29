@@ -17,8 +17,8 @@ import { CustomerDataComponent } from './app.section.customerdata.component';
 import { SellerDataComponent } from './app.section.sellerdata.component';
 import { DataComponent } from './app.data.component';
 import { AnimationComponent } from './app.animation.component';
-import { Header2Component } from './app.section.header2.component';
-import {Seller2Component} from './app.section.seller1.component';
+import { Header2Component } from './app.section.seller.header.component';
+import {Seller2Component} from './app.section.seller.features.component';
 
 
 const appRoutes: Routes = [
