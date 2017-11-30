@@ -8,6 +8,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'Daten vervollständigen',
+    icon: 'nb-home',
+    link: '/pages/datacomplete',
+   // home: true,
+  },
+  {
     title: 'FEATURES',
     group: true,
   },

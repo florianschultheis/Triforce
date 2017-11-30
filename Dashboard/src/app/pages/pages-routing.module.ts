@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DatacompleteComponent } from './datacomplete/datacomplete.component';
+
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +13,9 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
+    path: 'datacomplete',
+    component: DatacompleteComponent,
+  },{
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   }, {
