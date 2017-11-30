@@ -13,7 +13,7 @@ export class AnimationComponent implements OnInit{
       wrapper: document.getElementById('bodymovin'),
       animType: 'svg',
       loop: false,
-      autoplay: true,
+      autoplay: true, 
       path: '/../assets/vendor/loloco_animation/LOLOCO_2.json'
       
 
