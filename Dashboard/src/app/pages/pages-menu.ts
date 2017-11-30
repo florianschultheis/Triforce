@@ -9,8 +9,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'Daten vervollständigen',
-    icon: 'nb-home',
+    icon: 'nb-person',
     link: '/pages/datacomplete',
+   // home: true,
+  },
+  {
+    title: 'LOLOCode Generieren',
+    icon: 'nb-loop-circled',
+    link: '/pages/barcodegenerate',
+   // home: true,
+  },
+  {
+    title: 'LOLOCode Scannen',
+    icon: 'nb-search',
+    link: '/pages/barcodescan',
    // home: true,
   },
   {

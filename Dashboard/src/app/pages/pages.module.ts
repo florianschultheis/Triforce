@@ -5,6 +5,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { DatacompleteModule } from './datacomplete/datacomplete.module';
+import { QrscanModule } from './qrscan/qrscan.module';
+import { QrgenerateModule } from './qrgenerate/qrgenerate.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -16,6 +18,8 @@ const PAGES_COMPONENTS = [
     ThemeModule,
     DashboardModule,
     DatacompleteModule,
+    QrscanModule,
+    QrgenerateModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,

@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DatacompleteComponent } from './datacomplete/datacomplete.component';
+import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
+import { QrscanComponent } from './qrscan/qrscan.component';
 
 
 const routes: Routes = [{
@@ -15,7 +17,13 @@ const routes: Routes = [{
   }, {
     path: 'datacomplete',
     component: DatacompleteComponent,
-  },{
+  }, {
+    path: 'qrgenerate',
+    component: QrgenerateComponent,
+  }, {
+    path: 'qrscan',
+    component: QrscanComponent,
+  }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   }, {
