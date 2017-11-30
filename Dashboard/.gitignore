@@ -4,16 +4,7 @@
 /out-tsc
 
 # dependencies
-node_modules/*
-!node_modules/@nebular
-node_modules/@nebular/*
-!node_modules/@nebular/theme
-node_modules/@nebular/theme/*
-!node_modules/@nebular/theme/styles
-node_modules/@nebular/theme/styles/*
-!node_modules/@nebular/theme/styles/themes
-node_modules/@nebular/theme/styles/themes/*
-!node_modules/@nebular/theme/styles/themes/_defaults.scss
+
 
 # IDEs and editors
 /.idea
