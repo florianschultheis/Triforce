@@ -8,13 +8,13 @@ declare const echarts: any;
   styleUrls: ['./solar.component.scss'],
   template: `
     <nb-card size="xsmall" class="solar-card">
-      <nb-card-header>Profil Vollständigkeit</nb-card-header>
+      <nb-card-header>Profil</nb-card-header>
       <nb-card-body>
         <div echarts [options]="option" class="echart">
         </div>
         <div class="info">
-          <div class="value">6. 421 kWh</div>
-          <div class="details"><span>out of</span> 8.421 kWh</div>
+          <div class="value">fast <br/> Vollständig</div>
+          <div class="details"><span>&nbsp;</span>&nbsp;</div>
         </div>
       </nb-card-body>
     </nb-card>
