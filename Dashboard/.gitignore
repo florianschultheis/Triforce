@@ -5,7 +5,7 @@
 
 # dependencies
 /node_modules
-!Dashboard/node_modules/@nebular/theme/styles/themes/_defaults.scss
+!/Dashboard/node_modules/@nebular/theme/styles/themes/_defaults.scss
 
 # IDEs and editors
 /.idea
