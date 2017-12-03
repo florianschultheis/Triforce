@@ -8,6 +8,9 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CallbackComponent } from './pages/callback/callback.component';
+
 
 const routes: Routes = [
   { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
@@ -41,9 +44,12 @@ const routes: Routes = [
       },
     ],
   },
+  
+  { path: 'callback', component: CallbackComponent},
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];
+
 
 const config: ExtraOptions = {
   useHash: true,

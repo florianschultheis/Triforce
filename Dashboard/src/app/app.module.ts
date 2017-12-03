@@ -14,9 +14,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CallbackComponent } from './pages/callback/callback.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,CallbackComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -29,7 +31,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   bootstrap: [AppComponent],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: APP_BASE_HREF, useValue: '/' },AuthService
   ],
 })
 export class AppModule {
