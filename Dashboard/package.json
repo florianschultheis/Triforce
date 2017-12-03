@@ -66,6 +66,7 @@
     "ng2-smart-table": "1.1.0",
     "ng2-tree": "^2.0.0-alpha.10",
     "ngx-echarts": "1.2.2",
+    "ngx-zxing": "^0.2.1",
     "normalize.css": "6.0.0",
     "pace-js": "^1.0.2",
     "roboto-fontface": "0.8.0",
@@ -75,7 +76,8 @@
     "tinymce": "4.5.7",
     "typeface-exo": "0.0.22",
     "web-animations-js": "2.2.5",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+    "zxing-typescript": "^0.1.2"
   },
   "devDependencies": {
     "@angular/cli": "1.4.9",

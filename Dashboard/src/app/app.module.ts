@@ -17,6 +17,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CallbackComponent } from './pages/callback/callback.component';
 import { AuthService } from './auth/auth.service';
 
+// Import the library
+import { NgxZxingModule } from 'ngx-zxing';
+// Needed as well
+import { FormsModule } from "@angular/forms";
+
+
+
+
 @NgModule({
   declarations: [AppComponent,CallbackComponent],
   imports: [

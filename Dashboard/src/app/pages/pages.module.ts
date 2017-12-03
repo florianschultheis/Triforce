@@ -7,6 +7,7 @@ import { ThemeModule } from '../@theme/theme.module';
 import { DatacompleteModule } from './datacomplete/datacomplete.module';
 import { QrscanModule } from './qrscan/qrscan.module';
 import { QrgenerateModule } from './qrgenerate/qrgenerate.module';
+import { TabsModule } from './qrscan/tabs/tabs.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -20,6 +21,7 @@ const PAGES_COMPONENTS = [
     DatacompleteModule,
     QrscanModule,
     QrgenerateModule,
+    TabsModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,
