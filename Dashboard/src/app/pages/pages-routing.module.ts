@@ -7,7 +7,6 @@ import { DatacompleteComponent } from './datacomplete/datacomplete.component';
 import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
 import { QrscanComponent } from './qrscan/qrscan.component';
 
-
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
@@ -23,6 +22,9 @@ const routes: Routes = [{
   }, {
     path: 'qrscan',
     component: QrscanComponent,
+  }, {
+    path: 'sellermap',
+    loadChildren: './maps/maps.module#MapsModule',
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',

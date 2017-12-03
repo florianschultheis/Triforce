@@ -16,14 +16,32 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'LOLOCode Generieren',
     icon: 'nb-loop-circled',
-    link: '/pages/barcodegenerate',
+    link: '/pages/qrgenerate',
    // home: true,
   },
   {
     title: 'LOLOCode Scannen',
     icon: 'nb-search',
-    link: '/pages/barcodescan',
+    link: '/pages/qrscan',
    // home: true,
+  },
+  {
+    title: 'Händler Karte',
+    icon: 'nb-location',
+    children: [
+      {
+        title: 'Google Maps',
+        link: '/pages/maps/gmaps',
+      },
+      {
+        title: 'Leaflet Maps',
+        link: '/pages/maps/leaflet',
+      },
+      {
+        title: 'Bubble Maps',
+        link: '/pages/maps/bubble',
+      },
+    ],
   },
   {
     title: 'FEATURES',

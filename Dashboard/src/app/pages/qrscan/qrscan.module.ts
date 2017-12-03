@@ -3,6 +3,7 @@ import { AngularEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { QrscanComponent } from './qrscan.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { QrscanComponent } from './qrscan.component';
   ],
   declarations: [
     QrscanComponent,
+    TabsComponent,
   ],
 })
 export class QrscanModule { }
