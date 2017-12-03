@@ -1,11 +1,1 @@
 # dependencies
-/Dashboard/node_modules/*
-!Dashboard/node_modules/@nebular
-/Dashboard/node_modules/@nebular/*
-!Dashboard/node_modules/@nebular/theme
-/Dashboard/node_modules/@nebular/theme/*
-!Dashboard/node_modules/@nebular/theme/styles
-/Dashboard/node_modules/@nebular/theme/styles/*
-!Dashboard/node_modules/@nebular/theme/styles/themes
-/Dashboard/node_modules/@nebular/theme/styles/themes/*
-!Dashboard/node_modules/@nebular/theme/styles/themes/_default.scss
