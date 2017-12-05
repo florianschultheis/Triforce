@@ -26,22 +26,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
    // home: true,
   },
   {
-    title: 'Händler Karte',
+    title: 'Händler Karte 1',
     icon: 'nb-location',
-    children: [
-      {
-        title: 'Google Maps',
-        link: '/pages/maps/gmaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
-      },
-      {
-        title: 'Bubble Maps',
-        link: '/pages/maps/bubble',
-      },
-    ],
+    link: '/pages/sellermap',
   },
   {
     title: 'FEATURES',
