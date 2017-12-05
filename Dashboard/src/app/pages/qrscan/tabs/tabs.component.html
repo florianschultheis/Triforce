@@ -8,13 +8,13 @@
     <br>
     <br>
 
-    <div >
+    <div id="scanCamera">
       <ngx-zxing 
           [start]="camStarted"
           [device]="selectedDevice"
           (onCamsFound)="displayCameras($event)"
           (onScan)="handleQrCodeResult($event)"
-          id="scanCamera"
+          
       ></ngx-zxing>
     </div>
 
