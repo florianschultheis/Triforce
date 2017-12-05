@@ -14,13 +14,13 @@ export const MENU_ITEMS: NbMenuItem[] = [
    // home: true,
   },
   {
-    title: 'LOLOCode Generieren',
+    title: 'LoloCODE Generieren',
     icon: 'nb-loop-circled',
     link: '/pages/qrgenerate',
    // home: true,
   },
   {
-    title: 'LOLOCode Scannen',
+    title: 'LoloCODE Scannen',
     icon: 'nb-search',
     link: '/pages/qrscan',
    // home: true,

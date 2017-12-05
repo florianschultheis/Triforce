@@ -14,8 +14,6 @@ import { FormsModule } from "@angular/forms";
   imports: [
     ThemeModule,
     AngularEchartsModule,
-    FormsModule,
-    NgxZxingModule.forRoot(),
     
   ],
   declarations: [
