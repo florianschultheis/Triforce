@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./gmaps.component.scss'],
   template: `
     <nb-card>
-      <nb-card-header>Google Maps</nb-card-header>
+      <nb-card-header>Händler in deiner Nähe</nb-card-header>
       <nb-card-body>
         <agm-map [latitude]="lat" [longitude]="lng">
           <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>

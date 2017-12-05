@@ -14,20 +14,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
    // home: true,
   },
   {
-    title: 'LOLOCode Generieren',
+    title: 'LoloCODE Generieren',
     icon: 'nb-loop-circled',
     link: '/pages/qrgenerate',
    // home: true,
   },
   {
-    title: 'LOLOCode Scannen',
+    title: 'LoloCODE Scannen',
     icon: 'nb-search',
     link: '/pages/qrscan',
    // home: true,
   },
   {
-    title: 'Händler Karte',
+    title: 'Händler in deiner Nähe',
     icon: 'nb-location',
+    link: '/pages/maps/gmaps',
+    /*
     children: [
       {
         title: 'Google Maps',
@@ -42,6 +44,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/maps/bubble',
       },
     ],
+    */
   },
   {
     title: 'FEATURES',
