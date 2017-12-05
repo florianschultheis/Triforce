@@ -26,6 +26,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
    // home: true,
   },
   {
+<<<<<<< HEAD
     title: 'Händler in deiner Nähe',
     icon: 'nb-location',
     link: '/pages/maps/gmaps',
@@ -45,6 +46,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
     */
+=======
+    title: 'Händler Karte 1',
+    icon: 'nb-location',
+    link: '/pages/sellermap',
+>>>>>>> 23d8fee8b4b0413d89dd1f75d8d7dbbd4a0f8b9b
   },
   {
     title: 'FEATURES',

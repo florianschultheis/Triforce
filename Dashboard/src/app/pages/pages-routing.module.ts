@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DatacompleteComponent } from './datacomplete/datacomplete.component';
 import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
 import { QrscanComponent } from './qrscan/qrscan.component';
+import { SellermapComponent } from './sellermap/sellermap.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,7 +25,7 @@ const routes: Routes = [{
     component: QrscanComponent,
   }, {
     path: 'sellermap',
-    loadChildren: './maps/maps.module#MapsModule',
+    component: SellermapComponent,
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
