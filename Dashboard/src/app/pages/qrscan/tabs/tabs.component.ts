@@ -7,24 +7,8 @@ import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'ngx-tabs',
-  template: `
-    <div>
-    <span>Kamera wählen: </span>
-    <select (change)="onChange($event.target.value)">
-      <option *ngFor="let device of availableDevices" value="{{device.deviceId}}">{{device.label}}</option>
-    </select>
-    <br>
-    <br>
-      <ngx-zxing
-          [start]="camStarted"
-          [device]="selectedDevice"
-          (onCamsFound)="displayCameras($event)"
-          (onScan)="handleQrCodeResult($event)"
-      ></ngx-zxing>
-      <br>
-      <span>LoloCODE: <strong>{{qrResult}}</strong></span>
-    </div>
-  `,
+  styleUrls: ['./tabs.component.scss'],
+  templateUrl: './tabs.component.html',
 })
 export class TabsComponent {
   
