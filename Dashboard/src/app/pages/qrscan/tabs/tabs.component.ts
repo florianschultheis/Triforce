@@ -15,7 +15,7 @@ import {FormsModule} from "@angular/forms";
     </select>
     <br>
     <br>
-      <ngx-zxing
+      <ngx-zxinggit pull
           [start]="camStarted"
           [device]="selectedDevice"
           (onCamsFound)="displayCameras($event)"
