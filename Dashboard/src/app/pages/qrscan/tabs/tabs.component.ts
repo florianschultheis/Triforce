@@ -9,9 +9,11 @@ import {FormsModule} from "@angular/forms";
   selector: 'ngx-tabs',
   template: `
     <div>
+    <span>Kamera wählen: </span>
     <select (change)="onChange($event.target.value)">
       <option *ngFor="let device of availableDevices" value="{{device.deviceId}}">{{device.label}}</option>
     </select>
+    <br>
     <br>
       <ngx-zxing
           [start]="camStarted"
@@ -20,7 +22,7 @@ import {FormsModule} from "@angular/forms";
           (onScan)="handleQrCodeResult($event)"
       ></ngx-zxing>
       <br>
-      <span>Result: <strong>{{qrResult}}</strong></span>
+      <span>LoloCODE: <strong>{{qrResult}}</strong></span>
     </div>
   `,
 })
