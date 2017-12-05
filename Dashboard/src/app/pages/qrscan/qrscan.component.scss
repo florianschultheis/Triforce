@@ -1,0 +1,25 @@
+/*Style für Überschriften //ffried 5.12.*/
+@import '../../@theme/styles/themes';
+#instruction{
+    -webkit-text-fill-color: black;
+}
+
+
+/*Breite des Eingabefelds genau wie Breite des Videos //ffried 5.12.*/
+.input-group {
+    margin-bottom: 1rem;
+    width: 200px !important;
+    @media(min-width: 320px){
+      width: 310px !important;
+    }
+    @media(min-width: 576px){
+      width: 480px !important;
+      }
+      @media(min-width: 768px){
+        width: 660px !important;
+        }
+    @media(min-width: 1200px){
+      width: 870px !important;
+      }
+}
+

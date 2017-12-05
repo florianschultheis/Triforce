@@ -1,5 +1,5 @@
 <div>
-    <span>Kamera wählen: </span>
+    <span>Kamera wählen: &nbsp;</span>
 
     <select (change)="onChange($event.target.value)">
       <option *ngFor="let device of availableDevices" value="{{device.deviceId}}">{{device.label}}</option>
@@ -8,7 +8,7 @@
     <br>
     <br>
 
-    <div id="scanCamera">
+   
       <ngx-zxing 
           [start]="camStarted"
           [device]="selectedDevice"
@@ -16,9 +16,11 @@
           (onScan)="handleQrCodeResult($event)"
           
       ></ngx-zxing>
-    </div>
+    
 
       <br>
 
-      <span>LoloCODE: <strong>{{qrResult}}</strong></span>
+      <span>Gescannter LoloCODE: &nbsp;<strong>{{qrResult}}</strong></span>
+
+
 </div>
