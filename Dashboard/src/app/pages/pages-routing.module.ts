@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DatacompleteComponent } from './datacomplete/datacomplete.component';
+import { Datacomplete_SellerComponent } from './datacomplete_seller/datacomplete_seller.component';
+import { Datacomplete_ConsumerComponent } from './datacomplete_consumer/datacomplete_consumer.component';
 import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
 import { QrscanComponent } from './qrscan/qrscan.component';
 import { SellermapComponent } from './sellermap/sellermap.component';
@@ -15,9 +16,12 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
-    path: 'datacomplete',
-    component: DatacompleteComponent,
+    path: 'datacomplete_seller',
+    component: Datacomplete_SellerComponent,
   }, {
+    path: 'datacomplete_consumer',
+    component: Datacomplete_ConsumerComponent,
+  },{
     path: 'qrgenerate',
     component: QrgenerateComponent,
   }, {

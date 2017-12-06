@@ -3,31 +3,37 @@ import { NbMenuItem } from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Dashboard',
-    icon: 'nb-home',
+    icon: 'fa fa-home',
     link: '/pages/dashboard',
     home: true,
   },
   {
-    title: 'Daten vervollständigen',
-    icon: 'nb-person',
-    link: '/pages/datacomplete',
+    title: 'Händlerdaten verwalten',
+    icon: 'fa fa-user-o',
+    link: '/pages/datacomplete_seller',
+   // home: true,
+  },
+  {
+    title: 'Konsumentendaten verwalten',
+    icon: 'fa fa-user-o',
+    link: '/pages/datacomplete_consumer',
    // home: true,
   },
   {
     title: 'LoloCODE Generieren',
-    icon: 'nb-loop-circled',
+    icon: 'fa fa-qrcode',
     link: '/pages/qrgenerate',
    // home: true,
   },
   {
     title: 'LoloCODE Scannen',
-    icon: 'nb-search',
+    icon: 'fa fa-qrcode',
     link: '/pages/qrscan',
    // home: true,
   },
   {
-    title: 'Händler Karte 1',
-    icon: 'nb-location',
+    title: 'Händler in deiner Nähe',
+    icon: 'fa fa-map-marker',
     link: '/pages/sellermap',
   },
   {

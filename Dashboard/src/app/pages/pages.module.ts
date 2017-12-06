@@ -4,7 +4,8 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
-import { DatacompleteModule } from './datacomplete/datacomplete.module';
+import { Datacomplete_SellerModule } from './datacomplete_seller/datacomplete_seller.module';
+import { Datacomplete_ConsumerModule } from './datacomplete_consumer/datacomplete_consumer.module';
 import { QrscanModule } from './qrscan/qrscan.module';
 import { QrgenerateModule } from './qrgenerate/qrgenerate.module';
 import { TabsModule } from './qrscan/tabs/tabs.module';
@@ -19,7 +20,8 @@ const PAGES_COMPONENTS = [
     PagesRoutingModule,
     ThemeModule,
     DashboardModule,
-    DatacompleteModule,
+    Datacomplete_SellerModule,
+    Datacomplete_ConsumerModule,
     QrscanModule,
     QrgenerateModule,
     TabsModule,

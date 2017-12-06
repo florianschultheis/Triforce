@@ -1,0 +1,97 @@
+<nb-card>
+    <nb-card-header>Persönliche Daten</nb-card-header>
+    <nb-card-body>
+
+       <!-- Vor- und Nachname //ffried 06.12. -->
+       <small class="form-text">Name und Adresse</small>
+       <br>
+      <div class="row full-name-inputs">
+        <div class="col-sm-6 input-group">
+          <input type="text" placeholder="Vorname" class="form-control"/>
+        </div>
+        <div class="col-sm-6 input-group">
+          <input type="text" placeholder="Nachname" class="form-control"/>
+        </div>
+      </div>
+
+       <!-- Adresse //ffried 06.12. -->
+      <div class="input-group">
+        <input type="text" placeholder="Straße und Hausnummer" class="form-control"/>
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="PLZ und Ort" class="form-control"/>
+      </div>
+      
+
+       <!-- Geburtsdatum //ffried 06.12. -->
+       <small class="form-text">Geburtsdatum</small>
+       <br>
+          <div class="input-group">
+              <div class="input-group">
+              <input type="number" placeholder="TT" class="form-control"/>
+              <input type="number" placeholder="MM" class="form-control"/>
+              <input type="number" placeholder="JJJJ" class="form-control"/>
+            </div>
+          </div>
+      
+            
+        <!-- Beruf //ffried 06.12. -->
+        <small class="form-text">Beruf
+          </small>
+        <br>
+        <div class="form-group">
+            <select class="form-control">
+                <option>Schüler</option>
+                <option>Student</option>
+                <option>Angestellt</option>
+                <option>Selbstständig</option>
+                <option>Hausfrau/-mann</option>
+                <option>Pensioniert</option>
+                <option>Sonstiges</option>
+                <option>keine Angabe</option>
+            </select>
+          </div>
+
+        
+          <!-- Familienstatus //ffried 06.12. -->
+        <small class="form-text">Familienstatus
+          </small>
+        <br>
+        <div class="form-group">
+            <select class="form-control">
+                <option>Single</option>
+                <option>In einer Beziehung</option>
+                <option>Verheiratet</option>
+                <option>Sonstiges</option>
+                <option>keine Angabe</option>
+            </select>
+          </div>
+
+          <!-- Geschlecht //ffried 06.12. -->
+       <small class="form-text">Geschlecht</small>
+       <br>
+          <div class="input-group">
+              <label class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" name="customRadio">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">weiblich</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" name="customRadio" checked>
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">männlich</span>
+              </label>
+              <label class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" name="customRadio">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">keine Angabe</span>
+              </label>
+            </div>
+
+
+      <!-- Speichern-Button //ffried 06.12. -->
+      <br>
+      <button type="submit" class="btn btn-danger">Speichern</button>
+
+    </nb-card-body>
+  </nb-card>

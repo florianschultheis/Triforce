@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { AngularEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../../@theme/theme.module';
-import { DatacompleteComponent } from './datacomplete.component';
+import { Datacomplete_SellerComponent } from './datacomplete_seller.component';
 import { SolarComponent } from './solar/solar.component';
 import { FormComponent } from './form/form.component';
 import { ChangeEmail } from './changeemail/changeemail.component';
@@ -13,10 +13,10 @@ import { ChangeEmail } from './changeemail/changeemail.component';
     AngularEchartsModule,
   ],
   declarations: [
-    DatacompleteComponent,
+    Datacomplete_SellerComponent,
     SolarComponent,
     FormComponent,
     ChangeEmail,
   ],
 })
-export class DatacompleteModule { }
+export class Datacomplete_SellerModule { }
