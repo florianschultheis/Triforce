@@ -1,6 +1,6 @@
 .full-width {
     flex: 1;
-    min-width: 220px;
+    min-width: 200px;
   }
   
   nb-checkbox {
@@ -15,3 +15,9 @@
     padding-bottom: 0;
   }
   
+  /*Breite des Eingabefelds //ffried 6.12.*/
+.input-group {
+  margin-bottom: 1rem;
+  width: 350px !important;
+ 
+}

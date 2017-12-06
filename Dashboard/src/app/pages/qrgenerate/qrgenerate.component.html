@@ -1,16 +1,16 @@
 <ngx-qrcode [qrc-element-type]="elementType" [qrc-value] = "value">
 </ngx-qrcode>
 
-<div class="row">
-  <div class="col-md-12">
-    <nb-card class="inline-form-card">
-      <nb-card-header>Inline form</nb-card-header>
-      <nb-card-body>
-        <form class="form-inline">
-            <input  type="text" id = "text1" class="form-control full-width" placeholder="Name">
-          <button (click)="updateData()">Generieren</button>
-        </form>
-      </nb-card-body>
-    </nb-card>
-  </div>
+<br>
+
+<!--Eingabefeld //ffried 6.12.-->
+<div class="input-group">
+    <input type="text" id = "text1" class="form-control full-width" placeholder="QR-Inhalt eingeben...">
+    <span class="input-group-btn">
+        <button class="btn btn-danger" (click)="updateData()">
+          Generieren
+        </button>
+    </span>
 </div>
+
+
