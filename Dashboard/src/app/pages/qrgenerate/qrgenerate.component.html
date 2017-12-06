@@ -1,0 +1,16 @@
+<ngx-qrcode [qrc-element-type]="elementType" [qrc-value] = "value">
+</ngx-qrcode>
+
+<div class="row">
+  <div class="col-md-12">
+    <nb-card class="inline-form-card">
+      <nb-card-header>Inline form</nb-card-header>
+      <nb-card-body>
+        <form class="form-inline">
+            <input  type="text" id = "text1" class="form-control full-width" placeholder="Name">
+          <button (click)="updateData()">Generieren</button>
+        </form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
