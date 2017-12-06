@@ -15,9 +15,18 @@
     padding-bottom: 0;
   }
   
-  /*Breite des Eingabefelds //ffried 6.12.*/
+  /*Breite des Eingabefelds wir QR-Code //ffried 6.12.*/
 .input-group {
   margin-bottom: 1rem;
-  width: 350px !important;
+  width: 200px !important;
+  @media(min-width: 320px){
+    width: 310px !important;
+  }
+  @media(min-width: 576px){
+    width: 480px !important;
+    }
+    @media(min-width: 768px){
+      width: 660px !important;
+      }
  
 }
