@@ -15,7 +15,6 @@ export class QrgenerateComponent {
 
   updateData(){
     this.text1 = document.getElementById("text1");
-    alert(this.text1.value);
     this.value = this.text1.value;
   }
 }
