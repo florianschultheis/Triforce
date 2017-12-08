@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { Dashboard1Component } from './dashboard1/dashboard1.component';
 import { Datacomplete_SellerComponent } from './datacomplete_seller/datacomplete_seller.component';
 import { Datacomplete_ConsumerComponent } from './datacomplete_consumer/datacomplete_consumer.component';
 import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
@@ -13,8 +13,8 @@ const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [{
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: 'dashboard1',
+    component: Dashboard1Component,
   }, {
     path: 'datacomplete_seller',
     component: Datacomplete_SellerComponent,
@@ -53,7 +53,7 @@ const routes: Routes = [{
     loadChildren: './tables/tables.module#TablesModule',
   }, {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'dashboard1',
     pathMatch: 'full',
   }],
 }];
