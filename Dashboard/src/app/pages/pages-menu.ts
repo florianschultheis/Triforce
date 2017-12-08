@@ -35,7 +35,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Händler in deiner Nähe',
     icon: 'fa fa-map-marker',
     link: '/pages/sellermap',
-  },
+  },/**
   {
     title: 'FEATURES',
     group: true,
@@ -183,5 +183,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/auth/reset-password',
       },
     ],
-  },
+  }, */
 ];
