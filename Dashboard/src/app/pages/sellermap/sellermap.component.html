@@ -1,5 +1,10 @@
-<div class="row show-grid">
-    <div class="col-12 col-sm-6 col-md-8">
-        <ngx-gmaps></ngx-gmaps>
-    </div>
-</div>
+<nb-card>
+    <nb-card-header>Händler in deiner Nähe</nb-card-header>
+    <nb-card-body>
+        <agm-map [latitude]="lat" [longitude]="lng">
+            
+             <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            
+           </agm-map>
+    </nb-card-body>
+  </nb-card>
