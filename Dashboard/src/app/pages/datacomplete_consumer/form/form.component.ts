@@ -26,7 +26,7 @@ people: Person[] = [];
   }
 
   public savePeople(){
-    this.personService.savePeople(this.people).subscribe(() => alert('Geht'));
+    this.personService.savePeople(this.people).subscribe(() => alert('Gespeichert!'));
   }
   starRate = 2;
   heartRate = 4;
