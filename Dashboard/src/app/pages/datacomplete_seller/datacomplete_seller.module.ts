@@ -17,6 +17,6 @@ import { ChangeEmail } from './changeemail/changeemail.component';
     SolarComponent,
     FormComponent,
     ChangeEmail,
-  ],
+  ]
 })
 export class Datacomplete_SellerModule { }

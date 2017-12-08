@@ -33,7 +33,7 @@
 
        <!-- Adresse //ffried 06.12. -->
       <div class="input-group">
-        <input *ngFor = "let person of people" type="text" [Value]="person.adresse" class="form-control"/>
+        <input *ngFor = "let person of people" type="text" [value]="person.adresse" class="form-control"/>
       </div>
       <div class="input-group">
         <input type="text" placeholder="PLZ und Ort" class="form-control"/>
@@ -108,7 +108,7 @@
 
       <!-- Speichern-Button //ffried 06.12. -->
       <br>
-      <button type="submit" class="btn btn-danger"(click) = "savePeople()" >Speichern</button>
+      <button type="submit" class="btn btn-danger"(click)= "savePeople()" >Speichern</button>
 
     </nb-card-body>
   </nb-card>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonService, Person } from '../services/person.service';
+import { Person, PersonService } from '../services/person.service';
 
 @Component({
   selector: 'ngx-form',

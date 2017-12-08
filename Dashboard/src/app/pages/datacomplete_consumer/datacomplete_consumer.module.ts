@@ -6,6 +6,7 @@ import { Datacomplete_ConsumerComponent } from './datacomplete_consumer.componen
 import { SolarComponent } from './solar/solar.component';
 import { FormComponent } from './form/form.component';
 import { ChangeEmail } from './changeemail/changeemail.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { ChangeEmail } from './changeemail/changeemail.component';
     SolarComponent,
     FormComponent,
     ChangeEmail,
-  ],
+  ]
 })
 export class Datacomplete_ConsumerModule { }
