@@ -1,0 +1,10 @@
+c:\users\jana t\source\repos\NeuLoloco\bin\Debug\netcoreapp1.1\NeuLoloco.deps.json
+c:\users\jana t\source\repos\NeuLoloco\bin\Debug\netcoreapp1.1\NeuLoloco.runtimeconfig.json
+c:\users\jana t\source\repos\NeuLoloco\bin\Debug\netcoreapp1.1\NeuLoloco.runtimeconfig.dev.json
+c:\users\jana t\source\repos\NeuLoloco\bin\Debug\netcoreapp1.1\NeuLoloco.dll
+c:\users\jana t\source\repos\NeuLoloco\bin\Debug\netcoreapp1.1\NeuLoloco.pdb
+c:\users\jana t\source\repos\NeuLoloco\obj\Debug\netcoreapp1.1\NeuLoloco.csprojResolveAssemblyReference.cache
+c:\users\jana t\source\repos\NeuLoloco\obj\Debug\netcoreapp1.1\NeuLoloco.csproj.CoreCompileInputs.cache
+c:\users\jana t\source\repos\NeuLoloco\obj\Debug\netcoreapp1.1\NeuLoloco.AssemblyInfo.cs
+c:\users\jana t\source\repos\NeuLoloco\obj\Debug\netcoreapp1.1\NeuLoloco.dll
+c:\users\jana t\source\repos\NeuLoloco\obj\Debug\netcoreapp1.1\NeuLoloco.pdb
