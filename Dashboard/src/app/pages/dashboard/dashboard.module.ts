@@ -12,8 +12,6 @@ import { TemperatureDraggerComponent } from './temperature/temperature-dragger/t
 import { TeamComponent } from './team/team.component';
 import { KittenComponent } from './kitten/kitten.component';
 import { SecurityCamerasComponent } from './security-cameras/security-cameras.component';
-import { ElectricityComponent } from './electricity/electricity.component';
-import { ElectricityChartComponent } from './electricity/electricity-chart/electricity-chart.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SolarComponent } from './solar/solar.component';
 import { PlayerComponent } from './rooms/player/player.component';
@@ -37,8 +35,6 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     TeamComponent,
     KittenComponent,
     SecurityCamerasComponent,
-    ElectricityComponent,
-    ElectricityChartComponent,
     WeatherComponent,
     PlayerComponent,
     SolarComponent,
