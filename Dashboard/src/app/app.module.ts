@@ -21,6 +21,7 @@ import { AuthService } from './auth/auth.service';
 import { NgxZxingModule } from 'ngx-zxing';
 // Needed as well
 import { FormsModule } from "@angular/forms";
+import { PersonService } from './pages/datacomplete_consumer/services/person.service';
 
 
 
@@ -31,6 +32,8 @@ import { FormsModule } from "@angular/forms";
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
+    FormsModule,
+    
     AppRoutingModule,
 
     NgbModule.forRoot(),
@@ -39,7 +42,7 @@ import { FormsModule } from "@angular/forms";
   ],
   bootstrap: [AppComponent],
   providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },AuthService
+    { provide: APP_BASE_HREF, useValue: '/' },AuthService, PersonService
   ],
 })
 export class AppModule {
