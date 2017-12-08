@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import { DashboardModule } from './dashboard/dashboard.module';
+import { Dashboard1Module } from './dashboard1/dashboard1.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { Datacomplete_SellerModule } from './datacomplete_seller/datacomplete_seller.module';
@@ -19,7 +19,7 @@ const PAGES_COMPONENTS = [
   imports: [
     PagesRoutingModule,
     ThemeModule,
-    DashboardModule,
+    Dashboard1Module,
     Datacomplete_SellerModule,
     Datacomplete_ConsumerModule,
     QrscanModule,

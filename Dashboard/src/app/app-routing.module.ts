@@ -8,7 +8,7 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
 import { CallbackComponent } from './pages/callback/callback.component';
 
 

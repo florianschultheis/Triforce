@@ -5,14 +5,17 @@ import { LeafletModule } from '@asymmetrik/angular2-leaflet';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { SellermapComponent } from './sellermap.component';
-import { GmapsComponent} from './gmaps/gmaps.component'
+import { GmapsComponent} from './gmaps/gmaps.component';
 
 @NgModule({
   imports: [
     ThemeModule,
     AngularEchartsModule,
-    AgmCoreModule,
-    LeafletModule,
+     LeafletModule,
+    AgmCoreModule.forRoot({
+      
+           apiKey: 'AIzaSyC9OU-R0bXKXldqsosq5aJFEeIui7vtXHc'})
+
   ],
   declarations: [
     SellermapComponent,
