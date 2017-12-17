@@ -11,7 +11,7 @@ export class AuthService {
     domain: 'lolocode.eu.auth0.com',
     responseType: 'token id_token',
     audience: 'https://lolocode.eu.auth0.com/userinfo',
-    redirectUri: 'http://localhost:8000/#/callback',     
+    redirectUri: 'http://localhost:8000/callback',     
     scope: 'openid' 
   });
 
@@ -24,12 +24,13 @@ export class AuthService {
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
+        alert("hat geklappt");
         this.setSession(authResult);
-        this.router.navigate(['/callback']);
+        alert("hat auch geklappt");
+        this.router.navigate(['/']);
       } else if (err) {
-        this.router.navigate(['/callback']);
-        console.log(err);
+        this.router.navigate(['/']);
+        alert(err);
       }
     });
   }

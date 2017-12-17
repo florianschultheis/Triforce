@@ -22,12 +22,13 @@ import { NgxZxingModule } from 'ngx-zxing';
 // Needed as well
 import { FormsModule } from "@angular/forms";
 import { PersonService } from './pages/datacomplete_consumer/services/person.service';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,CallbackComponent],
+  declarations: [AppComponent,CallbackComponent,LoginComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

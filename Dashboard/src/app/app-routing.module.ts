@@ -10,6 +10,7 @@ import {
 } from '@nebular/auth';
 import { Dashboard1Component } from './pages/dashboard1/dashboard1.component';
 import { CallbackComponent } from './pages/callback/callback.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
@@ -46,13 +47,15 @@ const routes: Routes = [
   },
   
   { path: 'callback', component: CallbackComponent},
+  { path: 'login', component: LoginComponent},
+
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '**', redirectTo: 'pages' }, 
 ];
 
 
 const config: ExtraOptions = {
-  useHash: true,
+  useHash: false,
 };
 
 @NgModule({

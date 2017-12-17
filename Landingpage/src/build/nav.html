@@ -24,32 +24,19 @@
                        <button (click) = "auth.login()" >Login </button>
                     </li> -->
 
-                    <li>
-                            <!-- <a class="page-scroll" href="#downloads">ICH BIN HÄNDLER</a> -->
-                            <a *ngIf="auth.isAuthenticated()" routerLink="/data" routerLinkActive="/"  > Daten vervollständigen</a> 
-                             
-                         </li>
 
                     <li>
                       <!--  <button (click) = "auth.login()" >Login </button> class class="btn btn-primary btn-margin" -->
                       <!--  29.11.2017 Malte Cursor change to pointer -->
                       <a class="cursorchange" 
                       
-                      *ngIf="!auth.isAuthenticated()"
-                      (click)="auth.login()">
+               
+                      (click)="changeDomain()">
                         Login
                     </a>
               
                     </li>
-                    <li>
-                            <a class="cursorchange"
-                           
-                            *ngIf="auth.isAuthenticated()"
-                            (click)="auth.logout()">
-                              Logout
-                    </a>
-                                                       
-                    </li>
+
                  
                 </ul>
             </div>

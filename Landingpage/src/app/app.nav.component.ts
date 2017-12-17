@@ -13,10 +13,9 @@ export class NavComponent implements AfterViewInit {
  
 
   
-constructor(public auth : AuthService){
-  auth.handleAuthentication();
-  
-}
+  changeDomain(){
+    location.replace("http://localhost:8000/login");
+  }
 
   ngAfterViewInit() {
 
