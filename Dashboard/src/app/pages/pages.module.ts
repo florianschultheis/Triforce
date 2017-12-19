@@ -11,7 +11,7 @@ import { QrgenerateModule } from './qrgenerate/qrgenerate.module';
 import { TabsModule } from './qrscan/tabs/tabs.module';
 import { SellermapModule } from './sellermap/sellermap.module';
 import { SellerOverviewModule } from './seller-overview/seller-overview.module';
-import { ScChoiceComponent } from './sc-choice/sc-choice.component';
+import { ScChoiceModule } from './sc-choice/sc-choice.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -29,10 +29,11 @@ const PAGES_COMPONENTS = [
     TabsModule,
     SellermapModule,
     SellerOverviewModule,
+    ScChoiceModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,
-    ScChoiceComponent,
+    
     
   ],
 })
