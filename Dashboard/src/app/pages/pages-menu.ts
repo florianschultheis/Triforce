@@ -35,6 +35,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Händler in deiner Nähe',
     icon: 'fa fa-map-marker',
     link: '/pages/sellermap',
+  },
+  {
+    title: 'Händlerübersicht',
+    icon: 'fa fa-map-marker',
+    link: '/pages/seller-overview',
+  },
+  {
+    title: 'Bitte Wählen Sie',
+    icon: 'fa fa-question-circle-o',
+    link: '/pages/sc-choice',
   },/**
   {
     title: 'FEATURES',

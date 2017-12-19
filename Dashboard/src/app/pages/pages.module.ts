@@ -10,6 +10,8 @@ import { QrscanModule } from './qrscan/qrscan.module';
 import { QrgenerateModule } from './qrgenerate/qrgenerate.module';
 import { TabsModule } from './qrscan/tabs/tabs.module';
 import { SellermapModule } from './sellermap/sellermap.module';
+import { SellerOverviewModule } from './seller-overview/seller-overview.module';
+import { ScChoiceComponent } from './sc-choice/sc-choice.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -26,9 +28,12 @@ const PAGES_COMPONENTS = [
     QrgenerateModule,
     TabsModule,
     SellermapModule,
+    SellerOverviewModule,
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    ScChoiceComponent,
+    
   ],
 })
 export class PagesModule {

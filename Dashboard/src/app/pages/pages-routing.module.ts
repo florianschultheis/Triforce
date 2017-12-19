@@ -8,6 +8,8 @@ import { Datacomplete_ConsumerComponent } from './datacomplete_consumer/datacomp
 import { QrgenerateComponent} from './qrgenerate/qrgenerate.component'
 import { QrscanComponent } from './qrscan/qrscan.component';
 import { SellermapComponent } from './sellermap/sellermap.component';
+import { SellerOverviewComponent } from './seller-overview/seller-overview.component';
+import { ScChoiceComponent } from './sc-choice/sc-choice.component';
 
 const routes: Routes = [{
   path: '',
@@ -30,6 +32,12 @@ const routes: Routes = [{
   }, {
     path: 'sellermap',
     component: SellermapComponent,
+  }, {
+    path: 'seller-overview',
+    component: SellerOverviewComponent,
+  },{
+    path: 'sc-choice',
+    component: ScChoiceComponent,
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
