@@ -37,8 +37,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/sellermap',
   },
   {
-    title: 'Händlerübersicht',
-    icon: 'fa fa-map-marker',
+    title: 'Meine Händler',
+    icon: 'fa fa-shopping-bag ',
     link: '/pages/seller-overview',
   },
   {
