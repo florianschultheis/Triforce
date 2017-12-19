@@ -26,7 +26,6 @@ import { LoginComponent } from './pages/login/login.component';
 
 
 
-
 @NgModule({
   declarations: [AppComponent,CallbackComponent,LoginComponent],
   imports: [
