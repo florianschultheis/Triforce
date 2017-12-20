@@ -1,0 +1,16 @@
+    <div class="modal-header">
+        <span>{{ modalSellername }}</span>
+        <button class="close" aria-label="Close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ modalSellertext }}
+        <br>
+        <br>
+        <div><ngx-solar [chartValue]= "(modalCollectedpoints)*10"></ngx-solar></div>
+        {{ modalCollectedpoints }}
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-md btn-primary" (click)="closeModal()">OK</button>
+      </div>
