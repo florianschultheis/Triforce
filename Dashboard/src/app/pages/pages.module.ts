@@ -12,6 +12,7 @@ import { TabsModule } from './qrscan/tabs/tabs.module';
 import { SellermapModule } from './sellermap/sellermap.module';
 import { SellerOverviewModule } from './seller-overview/seller-overview.module';
 import { ScChoiceModule } from './sc-choice/sc-choice.module';
+import { TestComponent } from './test/test.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -33,6 +34,7 @@ const PAGES_COMPONENTS = [
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    TestComponent,
     
     
   ],

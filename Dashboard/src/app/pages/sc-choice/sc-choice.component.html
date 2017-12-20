@@ -2,22 +2,24 @@
   <nb-card>
     <nb-card-header>Sind Sie Verkäufer oder Konsument?</nb-card-header>
     <nb-card-body>
-      <form>
-        <div class="form-check">
+      <form name="Rolle wählen">
+        <div id="choice" class="form-check">
           <label class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" name="gridRadios">
+            <input (checked)="checked()" id="r1" type="radio" class="custom-control-input" name="gridRadios" value="True">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Verkäufer</span>
           </label>
           <p></p>
           <label class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" name="gridRadios">
+            <input ng-checked="" id="r2" type="radio" class="custom-control-input" name="gridRadios" value="alsoTrue">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Konsument</span>
           </label>
         </div>
         <br>
-        <button type="submit" class="btn btn-danger">Weiter</button>
+        <button (click)="weiter()" id="bt" type="submit" class="btn btn-danger">Weiter</button>
       </form>
     </nb-card-body>
   </nb-card>
+
+
