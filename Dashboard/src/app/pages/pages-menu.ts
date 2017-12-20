@@ -8,12 +8,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'Händlerdaten verwalten',
-    icon: 'fa fa-user-o',
-    link: '/pages/datacomplete_seller',
-   // home: true,
-  },
-  {
     title: 'Konsumentendaten verwalten',
     icon: 'fa fa-user-o',
     link: '/pages/datacomplete_consumer',
@@ -26,12 +20,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
    // home: true,
   },
   {
-    title: 'LoloCODE Scannen',
-    icon: 'fa fa-qrcode',
-    link: '/pages/qrscan',
-   // home: true,
-  },
-  {
     title: 'Händler in deiner Nähe',
     icon: 'fa fa-map-marker',
     link: '/pages/sellermap',
@@ -41,13 +29,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'fa fa-shopping-bag ',
     link: '/pages/seller-overview',
   },
-  {
-    title: 'Bitte Wählen Sie',
-    icon: 'fa fa-question-circle-o',
-    link: '/pages/sc-choice',
-  },
+
 ];
-export const MENU_ITEMS_SELLER : NbMenuItem[] = [{
+export const MENU_ITEMS_SELLER : NbMenuItem[] = [
+  {
   title: 'Dashboard',
   icon: 'fa fa-home',
   link: '/pages/dashboard1',
@@ -58,7 +43,22 @@ export const MENU_ITEMS_SELLER : NbMenuItem[] = [{
   icon: 'fa fa-user-o',
   link: '/pages/datacomplete_seller',
  // home: true,
-},];
+},
+{
+  title: 'LoloCODE Scannen',
+  icon: 'fa fa-qrcode',
+  link: '/pages/qrscan',
+ // home: true,
+},
+];
+
+export const MENU_ITEMS_FIRST : NbMenuItem[] =[
+  {
+    title: 'Bitte Wählen Sie',
+    icon: 'fa fa-question-circle-o',
+    link: '/pages/sc-choice',
+  }
+];
 
 
 

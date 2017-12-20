@@ -1,23 +1,35 @@
 import { Component } from '@angular/core';
 
-import { MENU_ITEMS, MENU_ITEMS_SELLER } from './pages-menu';
+import { MENU_ITEMS, MENU_ITEMS_SELLER, MENU_ITEMS_FIRST } from './pages-menu';
+import { ScChoiceComponent } from './sc-choice/sc-choice.component';
+import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 
 @Component({
   selector: 'ngx-pages',
   template: `
     <ngx-sample-layout>
-      <nb-menu [items]="hallo" *ngIf="getSC()"></nb-menu>
-      <nb-menu [items]="menu" *ngIf="false"></nb-menu>
+      <nb-menu [items]="first" *ngIf="isFirstLogin()"></nb-menu> 
+      <nb-menu [items]="consumer" *ngIf="!isFirstLogin() && getSC()"></nb-menu>
+      <nb-menu [items]="seller" *ngIf="false"></nb-menu>
       <router-outlet></router-outlet>
     </ngx-sample-layout>
   `,
 })
-export class PagesComponent {
+export class PagesComponent{
+
+  isSeller : boolean;
+
+
+isFirstLogin(){
+return this.isSeller;
+}
 
 getSC(){
-return true; 
+
+  return true; 
 }
   
-  menu = MENU_ITEMS;
-  hallo = MENU_ITEMS_SELLER;
+  consumer = MENU_ITEMS;
+  seller = MENU_ITEMS_SELLER;
+  first = MENU_ITEMS_FIRST;
 }
