@@ -17,4 +17,6 @@ export class QrgenerateComponent {
     this.text1 = document.getElementById("text1");
     this.value = this.text1.value;
   }
+
+  
 }

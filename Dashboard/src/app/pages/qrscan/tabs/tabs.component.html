@@ -24,8 +24,21 @@
 
       
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="LOLOCO ID eingeben..." value="{{qrResult}}" >
+        <input id="consumerid" type="text" class="form-control" placeholder="LOLOCO ID eingeben..." value="{{qrResult}}" >
         
+    </div>
+
+    <div class="input-group">
+        <input id="sellerid" type="text" class="form-control" placeholder="HändlerID angeben">
+    </div>
+    <div class="input-group">
+        <input id="amount" type="number" class="form-control" placeholder="Betrag/Menge eingeben...">
+        <span class="input-group-btn">
+            <button class="btn btn-danger" (click)="indb()">
+                Einkauf Gutschreiben
+            </button>
+            <p></p>
+        </span>
     </div>
 
 </div>
