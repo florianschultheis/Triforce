@@ -5,7 +5,6 @@ import { LeafletModule } from '@asymmetrik/angular2-leaflet';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { SellermapComponent } from './sellermap.component';
-import { GmapsComponent} from './gmaps/gmaps.component';
 
 @NgModule({
   imports: [
@@ -19,7 +18,6 @@ import { GmapsComponent} from './gmaps/gmaps.component';
   ],
   declarations: [
     SellermapComponent,
-    GmapsComponent,
   ],
 })
 export class SellermapModule { }
