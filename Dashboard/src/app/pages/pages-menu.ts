@@ -45,7 +45,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'Bitte Wählen Sie',
     icon: 'fa fa-question-circle-o',
     link: '/pages/sc-choice',
-  },/**
+  },
+];
+export const MENU_ITEMS_SELLER : NbMenuItem[] = [{
+  title: 'Dashboard',
+  icon: 'fa fa-home',
+  link: '/pages/dashboard1',
+  home: true,
+},
+{
+  title: 'Händlerdaten verwalten',
+  icon: 'fa fa-user-o',
+  link: '/pages/datacomplete_seller',
+ // home: true,
+},];
+
+
+
+  /**
   {
     title: 'FEATURES',
     group: true,
@@ -194,4 +211,4 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   }, */
-];
+
