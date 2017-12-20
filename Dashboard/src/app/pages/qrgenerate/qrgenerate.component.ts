@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class QrgenerateComponent {
   elementType : 'url' | 'canvas' | 'img' = 'url';
-  value : string = 'Techiediaries';
+  value : string = 'Loloco';
   text1 : any; 
 
   constructor(){}
