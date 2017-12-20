@@ -1,11 +1,12 @@
 <nb-card size="xsmall" class="solar-card">
-    <nb-card-header>Profil</nb-card-header>
+    <nb-card-header>Meine Punkte</nb-card-header>
     <nb-card-body> 
       <div echarts [options]="option" class="echart">
       </div>
       <div class="info">
           
-        <div class="value">Noch <div>{{ modalCollectedpoints }}</div> Scans bis zum nächsten Gutschein!</div>
+        <div class="value">Noch {{ remainingScans() }} Punkte bis zum nächsten Gutschein!</div>
+        
         <div class="details"><span>&nbsp;</span>&nbsp;</div>
           
       </div>

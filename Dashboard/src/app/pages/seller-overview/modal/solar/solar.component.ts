@@ -12,7 +12,9 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
 
   private value = 0;
 
- 
+ remainingScans(){
+   return 10-(this.value/10);
+ }
 
   @Input('chartValue')
   set chartValue(value: number) {

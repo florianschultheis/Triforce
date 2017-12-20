@@ -19,7 +19,7 @@ export class SellerOverviewComponent {
   
       activeModal.componentInstance.modalSellername = sellerID; //Name mit SellerID aus Datenbank auslesen
       activeModal.componentInstance.modalSellertext = sellerID; //Text mit SellerID aus Datenbank auslesen
-      activeModal.componentInstance.modalCollectedpoints = 5; //Anzahl gesammelter Items mit SellerID aus Datenbank auslesen (max. 10)
+      activeModal.componentInstance.modalCollectedpoints = 4; //Anzahl gesammelter Items mit SellerID aus Datenbank auslesen (max. 10)
 
     }
 
