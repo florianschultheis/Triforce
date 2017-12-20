@@ -33,7 +33,7 @@ export class ScChoiceComponent implements OnInit {
      alert('läuft');
    }
    
-    //alert('klappt wieder')
+ 
     
   }
 
