@@ -20,6 +20,8 @@ export class PagesComponent{
   isSeller : boolean;
 
 
+
+  
 isFirstLogin(){
 return this.isSeller;
 }
