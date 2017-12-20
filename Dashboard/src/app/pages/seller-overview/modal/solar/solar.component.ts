@@ -12,8 +12,17 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
 
   private value = 0;
 
+  //Gibt verbleibende Scans zum Erstellen eines Gutscheins
  remainingScans(){
    return 10-(this.value/10);
+ }
+
+ test(){
+   if((10-(this.value/10)) == 0 ){
+     return true;
+   }else{
+     return false;
+   }
  }
 
   @Input('chartValue')

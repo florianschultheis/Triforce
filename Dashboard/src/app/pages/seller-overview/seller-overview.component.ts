@@ -13,13 +13,29 @@ export class SellerOverviewComponent {
 
   constructor(private modalService: NgbModal) { }
   
+    //Hier sollen die Daten mittels SellerID aus der Datenbank ausgelesen werden, momentan Mockup
+    getSellerName(sellerID : number){
+      if(sellerID == 0) return "Klein's Backstube"
+      if (sellerID == 1) return "Brunsing & Brunsing Friseure"
+      else return "Sellername"
+    }
+    getSellerText(sellerID : number){
+      if(sellerID == 0) return "Bäckerfrische seit 1872"
+      if (sellerID == 1) return "Ihre Frisur, Ihr Stil!"
+      else return "Sellertext"
+    }
+    getEarnedPoints(sellerID : number){
+      if(sellerID == 0) return 7
+      if (sellerID == 1) return 10
+      else return 3
+    }
 
-    showLargeModal(sellerID : String) {
+    showLargeModal(sellerID : number) {
       const activeModal = this.modalService.open(ModalComponent, { size: 'lg', container: 'nb-layout' });
-  
-      activeModal.componentInstance.modalSellername = sellerID; //Name mit SellerID aus Datenbank auslesen
-      activeModal.componentInstance.modalSellertext = sellerID; //Text mit SellerID aus Datenbank auslesen
-      activeModal.componentInstance.modalCollectedpoints = 4; //Anzahl gesammelter Items mit SellerID aus Datenbank auslesen (max. 10)
+
+      activeModal.componentInstance.modalSellername = this.getSellerName(sellerID); //Name mit SellerID aus Datenbank auslesen
+      activeModal.componentInstance.modalSellertext = this.getSellerText(sellerID); //Text mit SellerID aus Datenbank auslesen
+      activeModal.componentInstance.modalCollectedpoints = this.getEarnedPoints(sellerID); //Anzahl gesammelter Items mit SellerID aus Datenbank auslesen (max. 10)
 
     }
 
