@@ -3,19 +3,26 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import { JwtHelper } from 'angular2-jwt';
-
+import {Http} from '@angular/http';
 
 @Injectable()
 export class AuthService {
+  http: Http;
    
 jwtHelper: JwtHelper = new JwtHelper();
 
   private decode(authResult: any) {
+    var form = new FormData(); 
     alert("in der methode: " + authResult.idToken);
     var token = this.jwtHelper.decodeToken(authResult.idToken);
     alert("unser dekodiertes token lautet: " + token.email);
+    form.append('I',token.id);
+    form.append('Email', token.email);
     //http post sende mail und UserID 
     //http get ob datensatz vorhanden ist basierend auf e-mail
+    this.http.post('localhost:49873/api/users/',form);
+    this.http.get('localhost:49873/api/users/token.id');
+    
   }
 
   auth0 = new auth0.WebAuth({
