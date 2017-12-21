@@ -10,9 +10,9 @@ export class PersonService {
 
   public getPeople(): Observable<Person[]>{
      return this.http
-    .get('http://localhost:55372/api/people')
+    .get('http://localhost:49873/api/users/')
     .map(r =>r.json())
-    .map(e =>e.map (c=> new Person(c.vorname, c.nachname, c.adresse)));
+    .map(e =>e.map (c=> new Person(c.id)));
     
   }
   
@@ -25,7 +25,6 @@ export class PersonService {
   
 }
 export class Person{
-  constructor(public vorname: string, public nachname: string, public adresse: string){
-    
+  constructor(public id){
   }
 }
