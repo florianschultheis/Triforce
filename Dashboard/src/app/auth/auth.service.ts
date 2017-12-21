@@ -15,7 +15,8 @@ export class AuthService {
 constructor(private http:Http, public router : Router) { } 
 id : number; 
 jwtHelper: JwtHelper = new JwtHelper();
-exists : boolean;
+exists : boolean = false;
+
 
 
 public getPeopleExist(i : number): Observable<any>{
@@ -36,8 +37,7 @@ public savePeople(people: Person[]): Observable<any>{
     
     alert("unser dekodiertes token lautet: " + token.email);
     alert("unser dekodiertes token lautet: " + token.sub);
-    alert("unser dekodiertes token lautet: ");
-    alert("unser dekodiertes token lautet: " + token.email);
+    
     
     
     //http post sende mail und UserID 
@@ -46,10 +46,12 @@ public savePeople(people: Person[]): Observable<any>{
     //alert(this.exists);
     this.http.get('http://localhost:49873/api/users/Get/' + token.sub).subscribe(res => {
       
-    new PagesComponent(res.text());
-  
-  
-  });
+    if(res.text().toString() == 'true'){
+      this.exists = true; 
+    } else {
+      this.exists = false;
+    }
+   });
   }
 
   auth0 = new auth0.WebAuth({
