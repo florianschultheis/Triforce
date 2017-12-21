@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { AuthService } from '../../auth/auth.service';
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ScChoiceComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private http : Http, private auth : AuthService) { }
 
   ngOnInit() {
   }
@@ -25,9 +27,17 @@ export class ScChoiceComponent implements OnInit {
 
    if(ischecked1){
      alert('gute wahl');
+     var form = new FormData(); 
+     form.append('http://localhost:49873/api/users', 'true');
+     form.append('http://localhost:49873/api/users',this.auth.id);
+     this.http.post('http://localhost:49873/api/users', form);
+
    }
    else if(ischecked2){
      alert('noch bessere wahl');
+     form.append('http://localhost:49873/api/users', 'false');
+     form.append('http://localhost:49873/api/users',this.auth.id);
+     this.http.post('http://localhost:49873/api/users', form);
    }
    else{
      alert('läuft');
