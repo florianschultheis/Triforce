@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { AngularEchartsModule } from 'ngx-echarts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartModule } from 'angular2-chartjs';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { Dashboard2Component } from './dashboard2.component';
@@ -19,12 +21,21 @@ import { SolarComponent } from './solar/solar.component';
 import { PlayerComponent } from './rooms/player/player.component';
 import { TrafficComponent } from './traffic/traffic.component';
 import { TrafficChartComponent } from './traffic/traffic-chart.component';
-
+import { EchartsLineComponent } from './echarts/echarts-line.component';
+import { EchartsPieComponent } from './echarts/echarts-pie.component';
+import { EchartsBarComponent } from './echarts/echarts-bar.component';
+import { EchartsMultipleXaxisComponent } from './echarts/echarts-multiple-xaxis.component';
+import { EchartsAreaStackComponent } from './echarts/echarts-area-stack.component';
+import { EchartsBarAnimationComponent } from './echarts/echarts-bar-animation.component';
+import { EchartsRadarComponent } from './echarts/echarts-radar.component';
+import { EchartsComponent } from './echarts/echarts.component';
 
 @NgModule({
   imports: [
     ThemeModule,
     AngularEchartsModule,
+    NgxChartsModule,
+    ChartModule
   ],
   declarations: [
     Dashboard2Component,
@@ -44,6 +55,14 @@ import { TrafficChartComponent } from './traffic/traffic-chart.component';
     SolarComponent,
     TrafficComponent,
     TrafficChartComponent,
+    EchartsLineComponent,
+    EchartsPieComponent,
+    EchartsBarComponent,
+    EchartsMultipleXaxisComponent,
+    EchartsAreaStackComponent,
+    EchartsBarAnimationComponent,
+    EchartsRadarComponent,
+    EchartsComponent,
   ],
 })
 export class Dashboard2Module { }
