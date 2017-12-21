@@ -8,9 +8,9 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
   selector: 'ngx-pages',
   template: `
     <ngx-sample-layout>
-      <nb-menu [items]="first" *ngIf="isFirstLogin()"></nb-menu> 
-      <nb-menu [items]="consumer" *ngIf="!isFirstLogin() && getSC()"></nb-menu>
-      <nb-menu [items]="seller" *ngIf="false"></nb-menu>
+      <nb-menu [items]="consumer" *ngIf="true"></nb-menu>
+      <nb-menu [items]="seller" *ngIf="true"></nb-menu>     
+      <nb-menu [items]="first" *ngIf="true"></nb-menu> 
       <router-outlet></router-outlet>
     </ngx-sample-layout>
   `,
@@ -18,10 +18,10 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 export class PagesComponent{
 
   isSeller : boolean;
-
-
-
   
+
+
+
 isFirstLogin(){
 return this.isSeller;
 }
