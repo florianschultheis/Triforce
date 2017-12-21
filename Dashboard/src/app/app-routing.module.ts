@@ -50,12 +50,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
 
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' }, 
 ];
 
 
 const config: ExtraOptions = {
-  useHash: false,
+  useHash : false
 };
 
 @NgModule({
