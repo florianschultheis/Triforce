@@ -20,7 +20,8 @@ exists : boolean;
 public getPeopleExist(i : number): Observable<any>{
   return this.http
  .get('http://localhost:49873/api/users/1')
- .map(r =>r.json());
+ .map(r => r.json())
+ .map(e => e.this.exists);
 }
 
 
@@ -30,14 +31,13 @@ public savePeople(people: Person[]): Observable<any>{
 }
 
   private decode(authResult: any) {
-    alert("in der methode: " + authResult.idToken);
     var token = this.jwtHelper.decodeToken(authResult.idToken);
     alert("unser dekodiertes token lautet: " + token.email);
     //http post sende mail und UserID 
     //http get ob datensatz vorhanden ist basierend auf e-mail
-    this.getPeopleExist(token.id).subscribe(result => this.exists = result);
-    alert(this.exists);
-    
+    //this.getPeopleExist(token.id);
+    //alert(this.exists);
+    this.http.get('http://localhost:49873/api/users/Get/1 ').subscribe(res => {alert(res.text())});
   }
 
   auth0 = new auth0.WebAuth({
