@@ -8,7 +8,7 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
   selector: 'ngx-pages',
   template: `
     <ngx-sample-layout>
-      <nb-menu [items]="consumer" *ngIf="isFirstLogin()"></nb-menu>
+      <nb-menu [items]="consumer" *ngIf="isFirst"></nb-menu>
       <nb-menu [items]="seller" *ngIf="true"></nb-menu>     
       <nb-menu [items]="first" *ngIf="true"></nb-menu> 
       <router-outlet></router-outlet>
