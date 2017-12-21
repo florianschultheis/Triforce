@@ -2,17 +2,12 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Kunden-Dashboard',
     icon: 'fa fa-home',
     link: '/pages/dashboard1',
     home: true,
   },
-  {
-    title: 'Dashboard Händler',
-    icon: 'fa fa-home',
-    link: '/pages/dashboard2',
-    home: true,
-  },
+  
   {
     title: 'Konsumentendaten verwalten',
     icon: 'fa fa-user-o',
@@ -37,13 +32,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
 
 ];
+
 export const MENU_ITEMS_SELLER : NbMenuItem[] = [
   {
-  title: 'Dashboard',
-  icon: 'fa fa-home',
-  link: '/pages/dashboard1',
-  home: true,
-},
+    title: 'Händler-Dashboard',
+    icon: 'fa fa-home',
+    link: '/pages/dashboard2',
+    home: true,
+  },
 {
   title: 'Händlerdaten verwalten',
   icon: 'fa fa-user-o',
