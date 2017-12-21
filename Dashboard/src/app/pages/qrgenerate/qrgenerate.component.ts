@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'ngx-qrgenerate',
@@ -7,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class QrgenerateComponent {
   elementType : 'url' | 'canvas' | 'img' = 'url';
-  value : string = 'Loloco';
+  value : string = this.auth.email;
   text1 : any; 
 
-  constructor(){}
+  constructor(public auth : AuthService){}
 
 
   updateData(){

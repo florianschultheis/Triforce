@@ -16,6 +16,7 @@ constructor(private http:Http, public router : Router) { }
 id : string; 
 jwtHelper: JwtHelper = new JwtHelper();
 exists : boolean = false;
+email : string; 
 
 
 
@@ -38,6 +39,7 @@ public savePeople(people: Person[]): Observable<any>{
     alert("unser dekodiertes token lautet: " + token.email);
     alert("unser dekodiertes token lautet: " + token.sub);
     this.id = token.sub;
+    this.email = token.email; 
     
     
     
