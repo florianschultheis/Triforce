@@ -6,6 +6,7 @@ import { JwtHelper } from 'angular2-jwt';
 import {Http} from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Person, PersonService } from '../pages/datacomplete_consumer/services/person.service';
+import { PagesComponent } from '../pages/pages.component';
 
 @Injectable()
 export class AuthService {
@@ -14,7 +15,8 @@ export class AuthService {
 constructor(private http:Http, public router : Router) { } 
 id : number; 
 jwtHelper: JwtHelper = new JwtHelper();
-exists : boolean;
+exists : boolean = false;
+
 
 
 public getPeopleExist(i : number): Observable<any>{
@@ -32,12 +34,24 @@ public savePeople(people: Person[]): Observable<any>{
 
   private decode(authResult: any) {
     var token = this.jwtHelper.decodeToken(authResult.idToken);
+    
     alert("unser dekodiertes token lautet: " + token.email);
+    alert("unser dekodiertes token lautet: " + token.sub);
+    
+    
+    
     //http post sende mail und UserID 
     //http get ob datensatz vorhanden ist basierend auf e-mail
     //this.getPeopleExist(token.id);
     //alert(this.exists);
-    this.http.get('http://localhost:49873/api/users/Get/1 ').subscribe(res => {alert(res.text())});
+    this.http.get('http://localhost:49873/api/users/Get/' + token.sub).subscribe(res => {
+      
+    if(res.text().toString() == 'true'){
+      this.exists = true; 
+    } else {
+      this.exists = false;
+    }
+   });
   }
 
   auth0 = new auth0.WebAuth({
