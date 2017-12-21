@@ -38,7 +38,7 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
         xAxis: [
           {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            data: ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'],
             axisTick: {
               alignWithLabel: true,
             },
@@ -76,7 +76,7 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
         ],
         series: [
           {
-            name: 'Score',
+            name: 'Euro: ',
             type: 'bar',
             barWidth: '60%',
             data: [152, 163, 200, 334, 390, 330],

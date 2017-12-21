@@ -11,8 +11,8 @@ import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class SellermapComponent implements OnInit{
   geolocationPosition: Position;
-  positionlat: number = 50.941278;
-  positionlng: number = 6.958281;
+  positionlat: number = 50.916733;
+  positionlng: number = 6.941262;
 
 
 

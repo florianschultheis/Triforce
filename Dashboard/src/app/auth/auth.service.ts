@@ -13,7 +13,7 @@ export class AuthService {
 
   
 constructor(private http:Http, public router : Router) { } 
-id : number; 
+id : string; 
 jwtHelper: JwtHelper = new JwtHelper();
 exists : boolean = false;
 
@@ -37,6 +37,7 @@ public savePeople(people: Person[]): Observable<any>{
     
     alert("unser dekodiertes token lautet: " + token.email);
     alert("unser dekodiertes token lautet: " + token.sub);
+    this.id = token.sub;
     
     
     
