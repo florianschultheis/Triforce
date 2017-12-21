@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20171220162035_drei.cs" />
+    <Compile Remove="Migrations\20171220162035_drei.Designer.cs" />
+    <Compile Remove="Migrations\20171220162241_vier.cs" />
+    <Compile Remove="Migrations\20171220162241_vier.Designer.cs" />
+    <Compile Remove="Migrations\20171220162645_fu.cs" />
+    <Compile Remove="Migrations\20171220162645_fu.Designer.cs" />
+    <Compile Remove="Migrations\20171220162902_neu.cs" />
+    <Compile Remove="Migrations\20171220162902_neu.Designer.cs" />
+    <Compile Remove="Migrations\20171220163234_nue.cs" />
+    <Compile Remove="Migrations\20171220163234_nue.Designer.cs" />
+    <Compile Remove="Migrations\20171220163604_ju.cs" />
+    <Compile Remove="Migrations\20171220163604_ju.Designer.cs" />
+    <Compile Remove="Migrations\20171220163749_sechs.cs" />
+    <Compile Remove="Migrations\20171220163749_sechs.Designer.cs" />
+    <Compile Remove="Migrations\20171220175056_five.cs" />
+    <Compile Remove="Migrations\20171220175056_five.Designer.cs" />
+    <Compile Remove="Migrations\20171220180426_seven.cs" />
+    <Compile Remove="Migrations\20171220180426_seven.Designer.cs" />
+    <Compile Remove="Migrations\20171220180546_eight.cs" />
+    <Compile Remove="Migrations\20171220180546_eight.Designer.cs" />
+    <Compile Remove="Migrations\20171220180738_nine.cs" />
+    <Compile Remove="Migrations\20171220180738_nine.Designer.cs" />
+    <Compile Remove="Migrations\20171220181014_five.cs" />
+    <Compile Remove="Migrations\20171220181014_five.Designer.cs" />
+    <Compile Remove="Migrations\20171220181439_six.cs" />
+    <Compile Remove="Migrations\20171220181439_six.Designer.cs" />
+    <Compile Remove="Migrations\20171220181817_six.cs" />
+    <Compile Remove="Migrations\20171220181817_six.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>
