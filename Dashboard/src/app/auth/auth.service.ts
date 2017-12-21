@@ -17,11 +17,10 @@ jwtHelper: JwtHelper = new JwtHelper();
 exists : boolean;
 
 
-public getPeopleExist(i : number): Observable<Person[]>{
+public getPeopleExist(i : number): Observable<any>{
   return this.http
  .get('http://localhost:49873/api/users/1')
- .map(r =>r.json())
- .map(e =>e.map (c=> this.exists));
+ .map(r =>r.json());
 }
 
 
@@ -36,7 +35,7 @@ public savePeople(people: Person[]): Observable<any>{
     alert("unser dekodiertes token lautet: " + token.email);
     //http post sende mail und UserID 
     //http get ob datensatz vorhanden ist basierend auf e-mail
-    this.getPeopleExist(token.id);
+    this.getPeopleExist(token.id).subscribe(result => this.exists = result);
     alert(this.exists);
     
   }
