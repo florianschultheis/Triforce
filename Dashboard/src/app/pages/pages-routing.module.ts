@@ -10,6 +10,7 @@ import { QrscanComponent } from './qrscan/qrscan.component';
 import { SellermapComponent } from './sellermap/sellermap.component';
 import { SellerOverviewComponent } from './seller-overview/seller-overview.component';
 import { ScChoiceComponent } from './sc-choice/sc-choice.component';
+import { Dashboard2Component } from './dashboard2/dashboard2.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,6 +18,9 @@ const routes: Routes = [{
   children: [{
     path: 'dashboard1',
     component: Dashboard1Component,
+  }, {
+    path: 'dashboard2',
+    component: Dashboard2Component,
   }, {
     path: 'datacomplete_seller',
     component: Datacomplete_SellerComponent,

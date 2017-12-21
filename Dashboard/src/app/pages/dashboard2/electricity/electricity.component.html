@@ -1,0 +1,56 @@
+<nb-card size="large">
+  <div class="consumption-table">
+    <div class="table-header">
+      <div>Einkäufe</div>
+      <div class="subtitle">Umsätze deiner LOLOCO-Kunden</div>
+    </div>
+
+    <nb-tabset fullWidth>
+      <nb-tab *ngFor="let year of data" [tabTitle]="year.title" [active]="year.active">
+        <div class="stats-month" *ngFor="let month of year.months">
+          <div>
+            <span class="month">{{ month.month }}</span>
+            <span class="delta" [ngClass]="{ 'down': month.down }">{{ month.delta }}</span>
+          </div>
+          <div class="results">
+            <b>{{ month.kWatts }}</b> Punkte / <b>{{ month.cost }}</b> EURO
+          </div>
+        </div>
+      </nb-tab>
+    </nb-tabset>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-header">
+      <div class="header-stats">
+        <div class="stats-block">
+          <div class="subtitle">Punkte</div>
+          <div>
+            <span class="value">816</span>
+            <span class="unit">LOLOCoin</span>
+          </div>
+        </div>
+
+        <div class="stats-block">
+          <div class="subtitle">Umsatz</div>
+          <div>
+            <span class="value">291</span>
+            <span class="unit">EURO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown" ngbDropdown>
+        <button type="button" ngbDropdownToggle class="btn"
+                [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'btn-primary': currentTheme != 'default'}">
+          {{ type }}
+        </button>
+        <ul class="dropdown-menu" ngbDropdownMenu>
+          <li class="dropdown-item" *ngFor="let t of types" (click)="type = t">{{ t }}</li>
+        </ul>
+      </div>
+
+    </div>
+    <ngx-electricity-chart></ngx-electricity-chart>
+  </div>
+</nb-card>

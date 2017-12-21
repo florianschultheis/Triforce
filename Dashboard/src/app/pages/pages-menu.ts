@@ -8,6 +8,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'Dashboard Händler',
+    icon: 'fa fa-home',
+    link: '/pages/dashboard2',
+    home: true,
+  },
+  {
     title: 'Konsumentendaten verwalten',
     icon: 'fa fa-user-o',
     link: '/pages/datacomplete_consumer',

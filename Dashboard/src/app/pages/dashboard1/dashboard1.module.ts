@@ -4,7 +4,6 @@ import { AngularEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { Dashboard1Component } from './dashboard1.component';
 import { ConsumerModule} from './consumer/consumer.module';
-import { SellerModule } from './seller/seller.module';
 
 
 
@@ -13,7 +12,6 @@ import { SellerModule } from './seller/seller.module';
     ThemeModule,
     AngularEchartsModule,
     ConsumerModule,
-    SellerModule,
   ],
   declarations: [
     Dashboard1Component,
