@@ -11,7 +11,7 @@ import { AuthService } from '../auth/auth.service';
     <ngx-sample-layout>
       <nb-menu [items]="consumer" *ngIf="getLogin()"></nb-menu>
       <nb-menu [items]="seller" *ngIf="false"></nb-menu>     
-      <nb-menu [items]="first" *ngIf="false"></nb-menu> 
+      <nb-menu [items]="first" *ngIf="!getLogin()"></nb-menu> 
       <router-outlet></router-outlet>
     </ngx-sample-layout>
   `,
