@@ -4,24 +4,40 @@ import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import { JwtHelper } from 'angular2-jwt';
 import {Http} from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Person, PersonService } from '../pages/datacomplete_consumer/services/person.service';
 
 @Injectable()
 export class AuthService {
-  http: Http;
-   
+
+  
+constructor(private http:Http, public router : Router) { } 
+id : number; 
 jwtHelper: JwtHelper = new JwtHelper();
+exists : boolean;
+
+
+public getPeopleExist(i : number): Observable<Person[]>{
+  return this.http
+ .get('http://localhost:49873/api/users/1')
+ .map(r =>r.json())
+ .map(e =>e.map (c=> this.exists));
+}
+
+
+public savePeople(people: Person[]): Observable<any>{
+ return this.http
+ .post('http://localhost:55372/api/people', people);
+}
 
   private decode(authResult: any) {
-    var form = new FormData(); 
     alert("in der methode: " + authResult.idToken);
     var token = this.jwtHelper.decodeToken(authResult.idToken);
     alert("unser dekodiertes token lautet: " + token.email);
-    form.append('I',token.id);
-    form.append('Email', token.email);
     //http post sende mail und UserID 
     //http get ob datensatz vorhanden ist basierend auf e-mail
-    this.http.post('localhost:49873/api/users/',form);
-    this.http.get('localhost:49873/api/users/token.id');
+    this.getPeopleExist(token.id);
+    alert(this.exists);
     
   }
 
@@ -34,7 +50,6 @@ jwtHelper: JwtHelper = new JwtHelper();
     scope: 'openid email' 
   });
 
-  constructor(public router: Router) {}
 
   public login(): void {
     this.auth0.authorize();
