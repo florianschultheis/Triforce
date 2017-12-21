@@ -37,7 +37,7 @@ public savePeople(people: Person[]): Observable<any>{
     //http get ob datensatz vorhanden ist basierend auf e-mail
     //this.getPeopleExist(token.id);
     //alert(this.exists);
-    this.http.get('http://localhost:49873/api/users/Get/1').subscribe(res => {alert(res.text())});
+    this.http.get('http://localhost:49873/api/users/Get/1 ').subscribe(res => {alert(res.text())});
   }
 
   auth0 = new auth0.WebAuth({
