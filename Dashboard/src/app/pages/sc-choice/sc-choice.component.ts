@@ -26,18 +26,11 @@ export class ScChoiceComponent implements OnInit {
    var ischecked2 = e2.checked;
 
    if(ischecked1){
-     alert('gute wahl');
-     var form = new FormData(); 
-     form.append('http://localhost:49873/api/users', 'true');
-     form.append('http://localhost:49873/api/users',this.auth.id);
-     this.http.post('http://localhost:49873/api/users', form);
+     alert('Händler gewählt');
 
    }
    else if(ischecked2){
-     alert('noch bessere wahl');
-     form.append('http://localhost:49873/api/users', 'false');
-     form.append('http://localhost:49873/api/users',this.auth.id);
-     this.http.post('http://localhost:49873/api/users', form);
+     alert('Käufer gewählt. Bitte neu einloggen');
    }
    else{
      alert('läuft');

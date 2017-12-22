@@ -9,9 +9,9 @@ import { AuthService } from '../auth/auth.service';
   selector: 'ngx-pages',
   template: `
     <ngx-sample-layout>
-      <nb-menu [items]="consumer" *ngIf="true"></nb-menu>
-      <nb-menu [items]="seller" *ngIf="true"></nb-menu>     
-      <nb-menu [items]="first" *ngIf="true"></nb-menu> 
+      <nb-menu [items]="consumer" *ngIf="getLogin() && !getSeller()"></nb-menu>
+      <nb-menu [items]="seller" *ngIf="getSeller()"></nb-menu>     
+      <nb-menu [items]="first" *ngIf="!getLogin()"></nb-menu> 
       <router-outlet></router-outlet>
     </ngx-sample-layout>
   `,
@@ -21,7 +21,14 @@ export class PagesComponent{
   isSeller : boolean;
   isFirst : boolean; 
   
+  
 constructor(private auth : AuthService){}
+
+getSeller(){
+  if(this.auth.email == 'seller@test.de'){
+    return this.isSeller = true;
+  }
+}
 
 getLogin(){
   return this.auth.exists; 
