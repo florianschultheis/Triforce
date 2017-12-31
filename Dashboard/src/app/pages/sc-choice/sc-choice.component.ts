@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { AuthService } from '../../auth/auth.service';
+import { Person, PersonService } from '../datacomplete_consumer/services/person.service';
 
 
 @Component({
@@ -10,8 +11,12 @@ import { AuthService } from '../../auth/auth.service';
 })
 export class ScChoiceComponent implements OnInit {
 
+  id = 0; 
+  isSeller = false;
+  people = new Person(this.id, this.isSeller); 
 
-  constructor(private http : Http, private auth : AuthService) { }
+
+  constructor(private auth : AuthService, private personService : PersonService) { }
 
   ngOnInit() {
   }
@@ -21,12 +26,17 @@ export class ScChoiceComponent implements OnInit {
   weiter(){
    var e1 = <HTMLInputElement> document.getElementById('r1');
    var e2 = <HTMLInputElement> document.getElementById('r2');
-   
+
    var ischecked1 = e1.checked;
    var ischecked2 = e2.checked;
 
    if(ischecked1){
      alert('Händler gewählt');
+     alert(this.auth.id);
+     this.people.i = this.auth.id;
+     this.people.isSeller = true; 
+     alert(this.people.i + " und " + this.people.isSeller);
+     this.personService.setSeller(this.people).subscribe();
 
    }
    else if(ischecked2){

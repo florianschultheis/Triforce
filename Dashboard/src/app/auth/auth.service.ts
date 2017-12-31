@@ -27,10 +27,9 @@ public getPeopleExist(i : number): Observable<any>{
  .map(e => e.this.exists);
 }
 
-
-public savePeople(people: Person[]): Observable<any>{
+public savePeople(people: Person): Observable<any>{
  return this.http
- .post('http://localhost:55372/api/people', people);
+ .post('http://localhost:49873/api/users', people);
 }
 
   private decode(authResult: any) {
@@ -41,20 +40,7 @@ public savePeople(people: Person[]): Observable<any>{
     this.id = token.sub;
     this.email = token.email; 
     
-    
-    
-    //http post sende mail und UserID 
-    //http get ob datensatz vorhanden ist basierend auf e-mail
-    //this.getPeopleExist(token.id);
-    //alert(this.exists);
-    this.http.get('http://localhost:49873/api/users/Get/' + token.sub).subscribe(res => {
-      
-    if(res.text().toString() == 'true'){
-      this.exists = true; 
-    } else {
-      this.exists = false;
-    }
-   });
+    this.http.get('http://localhost:49873/api/users/Get/' + token.sub).subscribe(res => {});
   }
 
   auth0 = new auth0.WebAuth({
