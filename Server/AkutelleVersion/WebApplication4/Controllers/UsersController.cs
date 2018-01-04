@@ -20,6 +20,7 @@ namespace WebApplication4
         {
             _context = context;
         }
+        //Jana Teutenberg: Methode, die alle Users zurück gibt
         [HttpGet]
         public IActionResult Get()
         {
@@ -30,12 +31,12 @@ namespace WebApplication4
 
 
         }
-        //Jana Teutenberg: Methode, die überpürft, ob der User vorhanden ist 
+        //Jana Teutenberg: Methode, die überpürft, ob der User vorhanden ist und ihn sonst anlegt mit einer Id
         [HttpGet("Get/{id}", Name = "GetbyId")]
         // GET: Users/GetbyId/5
         public IActionResult GetbyId(string id)
         {
-            bool vorhanden;
+           // bool vorhanden;
             
             
            var Person = _context.Users.SingleOrDefault(
@@ -52,22 +53,25 @@ namespace WebApplication4
                 };
 
                 _context.Users.Add(Person);
-                vorhanden = false;
+                _context.SaveChanges();
+                //vorhanden = false;
+                return Ok(true);
 
             }
             else
             {
-                vorhanden = true;
+                //vorhanden = true;
+                return Ok(Person);
             }
          
-            _context.SaveChanges();
+            
 
-            return Ok(vorhanden);
+           // return Ok(vorhanden);
 
         }
-
+        //Jana Teutenberg: Methode, die eine Id bekommt und weitere Informationen, die aktualisiert werden
         [HttpPost]
-        public IActionResult SetSeller([FromBody] Person person)
+        public IActionResult Update([FromBody] Person person)
         {
             var Person = _context.Users.SingleOrDefault(
                c => c.I == person.I);
@@ -79,6 +83,10 @@ namespace WebApplication4
             else
             {
                 Person.IsSeller = person.IsSeller;
+                Person.Firstname = person.Firstname;
+                Person.Lastname = person.Lastname;
+                Person.Email = person.Email;
+                Person.Street = person.Street;
             }
 
 
@@ -91,138 +99,55 @@ namespace WebApplication4
         {
             public string I { get; set; }
             public bool IsSeller { get; set; }
-            
+            public string Firstname { get; set; }
+            public string Lastname { get; set; }
+            public string Street { get; set; }
+
+            public string Email { get; set; }
+
         }
 
-        // GET: Users
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Users.ToListAsync());
-        }
-
-        // GET: Users/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users
-                .SingleOrDefaultAsync(m => m.Userid == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-
-            return View(user);
-        }
-
-        // GET: Users/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Users/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Userid,Lastname,Firstname,street,number,i")] User user)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(user);
-        }
-
-        // GET: Users/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.Userid == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return View(user);
-        }
-
-        // POST: Users/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Userid,Lastname,Firstname,street,number,i")] User user)
-        {
-            if (id != user.Userid)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserExists(user.Userid))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(user);
-        }
-
+        //Jana Teutenberg: Methode, die überpürft, ob der User vorhanden ist und ihn dann löscht
+        [HttpGet("Delete/{id}", Name = "Delete")]
         // GET: Users/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public IActionResult Delete(string id)
         {
-            if (id == null)
+            
+
+
+            var Person = _context.Users.SingleOrDefault(
+                c => c.I == id);
+            if (Person == null)
             {
-                return NotFound();
+                return BadRequest();
+            }
+            else
+            {
+                _context.Remove(Person);
+                _context.SaveChanges();
             }
 
-            var user = await _context.Users
-                .SingleOrDefaultAsync(m => m.Userid == id);
-            if (user == null)
-            {
-                return NotFound();
-            }
 
-            return View(user);
+
+            return Ok(true);
+
         }
 
-        // POST: Users/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.Userid == id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
 
-        private bool UserExists(int id)
-        {
-            return _context.Users.Any(e => e.Userid == id);
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+       
     }
 }
