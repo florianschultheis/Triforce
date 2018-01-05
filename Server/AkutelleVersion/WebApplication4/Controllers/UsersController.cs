@@ -33,7 +33,7 @@ namespace WebApplication4
         }
         //Jana Teutenberg: Methode, die überpürft, ob der User vorhanden ist und ihn sonst anlegt mit einer Id
         [HttpGet("Get/{id}", Name = "GetbyId")]
-        // GET: Users/GetbyId/5
+        // GET: Users/Get/5
         public IActionResult GetbyId(string id)
         {
            // bool vorhanden;
@@ -46,8 +46,9 @@ namespace WebApplication4
                 // Create a new user                 
                 Person = new User()
                 {
-                    
+
                     I = id,
+                    vorhanden = true,
                     
      
                 };
@@ -55,12 +56,13 @@ namespace WebApplication4
                 _context.Users.Add(Person);
                 _context.SaveChanges();
                 //vorhanden = false;
-                return Ok(true);
+                return Ok(null);
 
             }
             else
             {
                 //vorhanden = true;
+                Person.vorhanden = false;
                 return Ok(Person);
             }
          
@@ -104,6 +106,7 @@ namespace WebApplication4
             public string Street { get; set; }
 
             public string Email { get; set; }
+            public bool vorhanden { get; set; }
 
         }
 
@@ -133,6 +136,33 @@ namespace WebApplication4
 
         }
 
+        //Jana Teutenberg: Methode, die überpürft, ob Daten des Users vollständig
+        [HttpGet("Complete/{id}", Name = "Complete")]
+        // GET: Users/Complete/5
+        public IActionResult Complete(string id)
+        {
+
+
+
+            var Person = _context.Users.SingleOrDefault(
+                c => c.I == id);
+            if (Person == null)
+            {
+                return BadRequest();
+            }
+            if (Person.Firstname == null|| Person.Lastname == null|| Person.Street == null )
+            {
+                return Ok(false);
+            }
+            else
+            { return Ok(true);
+            }
+
+
+
+            
+
+        }
 
 
 
@@ -146,8 +176,9 @@ namespace WebApplication4
 
 
 
-       
 
-       
+
+
+
     }
 }
