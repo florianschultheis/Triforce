@@ -11,9 +11,10 @@ using WebApplication4.Daten;
 namespace WebApplication4.Migrations
 {
     [DbContext(typeof(LolocoContext))]
-    partial class LolocoContextModelSnapshot : ModelSnapshot
+    [Migration("20180104111947_j1")]
+    partial class j1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,9 +48,9 @@ namespace WebApplication4.Migrations
                     b.Property<string>("Couponid")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Selleri");
+                    b.Property<int>("Selleri");
 
-                    b.Property<string>("Useri");
+                    b.Property<int>("Useri");
 
                     b.HasKey("Couponid");
 
@@ -72,8 +73,6 @@ namespace WebApplication4.Migrations
                     b.Property<string>("Lastname");
 
                     b.Property<string>("Street");
-
-                    b.Property<bool>("vorhanden");
 
                     b.HasKey("Userid");
 

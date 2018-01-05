@@ -17,6 +17,8 @@ namespace WebApplication4.Models
         public string I { get; set; }
         public bool IsSeller{ get; set; } 
 
+        public bool vorhanden { get; set; }
+
 
     }
 }

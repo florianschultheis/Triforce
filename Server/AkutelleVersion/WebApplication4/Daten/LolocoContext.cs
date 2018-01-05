@@ -17,6 +17,8 @@ namespace WebApplication4.Daten
 
         public DbSet<User> Users{ get; set; }
 
+        public DbSet<Coupon> Coupon { get; set; }
+
 
 
 
@@ -26,6 +28,7 @@ namespace WebApplication4.Daten
         {
             modelBuilder.Entity<Consumer>().ToTable("Consumer");
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Coupon>().ToTable("Coupon");
 
 
 

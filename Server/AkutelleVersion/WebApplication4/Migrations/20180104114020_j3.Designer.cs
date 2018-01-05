@@ -11,9 +11,10 @@ using WebApplication4.Daten;
 namespace WebApplication4.Migrations
 {
     [DbContext(typeof(LolocoContext))]
-    partial class LolocoContextModelSnapshot : ModelSnapshot
+    [Migration("20180104114020_j3")]
+    partial class j3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -72,8 +73,6 @@ namespace WebApplication4.Migrations
                     b.Property<string>("Lastname");
 
                     b.Property<string>("Street");
-
-                    b.Property<bool>("vorhanden");
 
                     b.HasKey("Userid");
 
