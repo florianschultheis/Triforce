@@ -12,14 +12,22 @@
         <div *ngIf="remainingScans() == 0">
         <div class="details">Ausreichend Punkte gesammelt</div>
         <br>
-        <button class="btn btn-md btn-primary" >Gutschein anzeigen</button>
+        <button class="btn btn-md btn-primary" (click)="showDiv()" >Gutschein anzeigen</button>
+        <br>
         <br>
         </div>
 
         <div class="details"><span>&nbsp;</span>&nbsp;</div>
-          
+
+        
+        
       </div>
       
     </nb-card-body>
-    
+
   </nb-card>
+
+  <div id="coupon" style="display:none;">
+    <ngx-qrcode [qrc-element-type]="elementType" [qrc-value] = "value1">
+  </ngx-qrcode>
+</div>
