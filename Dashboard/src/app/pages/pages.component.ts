@@ -25,7 +25,8 @@ export class PagesComponent implements OnInit{
   id : any; 
   isFirst : boolean = false; 
   people : Person[] = []; 
-  person = new Person(null,false);
+  person = new Person(null,false,false);
+  token : any; 
 
   
 constructor(private auth : AuthService, private personService : PersonService, private http : Http){
@@ -34,11 +35,13 @@ constructor(private auth : AuthService, private personService : PersonService, p
 ngOnInit(): void {
 
   try {
-    this.auth.getToken();
+    this.token = localStorage.getItem("id_token");
+    this.token = this.auth.decode(this.token);
     this.personService.getPeople().subscribe(res =>{ 
       this.people = res; 
-      this.person = res.find(x => x.i === this.auth.token.sub);
+      this.person = res.find(x => x.i === this.token);
         alert(this.person.i);
+        alert(this.person.vorhanden);
         this.isSeller = this.person.isSeller; 
     });
   }

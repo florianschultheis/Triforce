@@ -11,9 +11,10 @@ using WebApplication4.Daten;
 namespace WebApplication4.Migrations
 {
     [DbContext(typeof(LolocoContext))]
-    partial class LolocoContextModelSnapshot : ModelSnapshot
+    [Migration("20180105121809_j4")]
+    partial class j4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

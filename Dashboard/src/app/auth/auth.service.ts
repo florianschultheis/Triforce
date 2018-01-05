@@ -34,8 +34,8 @@ public savePeople(people: Person): Observable<any>{
  .post('http://localhost:49873/api/users', people);
 }
 
-  private decode(authResult: any) {
-    var token = this.jwtHelper.decodeToken(authResult.idToken);
+  public decode(authResult: any) {
+    var token = this.jwtHelper.decodeToken(authResult);
     this.token = token; 
     
     alert("unser dekodiertes token lautet: " + token.email);
@@ -44,7 +44,7 @@ public savePeople(people: Person): Observable<any>{
     this.email = token.email; 
     
     this.http.get('http://localhost:49873/api/users/Get/' + token.sub).subscribe(res => {});
-    
+    return this.token.sub;
   }
 
 public getToken(){
@@ -83,7 +83,7 @@ public getToken(){
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
-    this.decode(authResult); 
+    this.decode(authResult.idToken); 
     this.scheduleRenewal();
   }
 
