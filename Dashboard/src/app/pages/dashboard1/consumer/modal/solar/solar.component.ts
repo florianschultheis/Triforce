@@ -39,8 +39,14 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
   option: any = {};
   themeSubscription: any;
 
-  constructor(private theme: NbThemeService) {
+  constructor(private theme: NbThemeService) { }
+
+  showDiv(){
+    console.log('It works here')
+    let btn = document.getElementById("coupon");
+    btn.setAttribute("style", "display:block;");
   }
+
 
   ngAfterViewInit() {
     this.themeSubscription = this.theme.getJsTheme().delay(1).subscribe(config => {
@@ -179,6 +185,9 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
       });
     });
   }
+
+
+
 
   ngOnDestroy() {
     this.themeSubscription.unsubscribe();
