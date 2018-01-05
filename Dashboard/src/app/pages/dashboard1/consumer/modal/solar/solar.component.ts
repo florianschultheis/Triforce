@@ -10,20 +10,33 @@ declare const echarts: any;
 })
 export class SolarComponent implements AfterViewInit, OnDestroy {
 
+
+
+  elementType: 'url' | 'canvas' | 'img' = 'url';
+  value1: string = 'test';
+  text1: any;
+
+
+  updateData() {
+    this.text1 = document.getElementById("text1");
+    this.value = this.text1.value;
+  }
+
+
   private value = 0;
 
   //Gibt verbleibende Scans zum Erstellen eines Gutscheins
- remainingScans(){
-   return 10-(this.value/10);
- }
+  remainingScans() {
+    return 10 - (this.value / 10);
+  }
 
- test(){
-   if((10-(this.value/10)) == 0 ){
-     return true;
-   }else{
-     return false;
-   }
- }
+  test() {
+    if ((10 - (this.value / 10)) == 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   @Input('chartValue')
   set chartValue(value: number) {
@@ -41,7 +54,7 @@ export class SolarComponent implements AfterViewInit, OnDestroy {
 
   constructor(private theme: NbThemeService) { }
 
-  showDiv(){
+  showDiv() {
     console.log('It works here')
     let btn = document.getElementById("coupon");
     btn.setAttribute("style", "display:block;");
