@@ -92,7 +92,7 @@ echo Handling node.js deployment.
 call :SelectNodeVersion
  
 :: 2. Install npm packages
-IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%\Landingpage\package.json" (
   pushd "%DEPLOYMENT_SOURCE%"
   call :ExecuteCmd !NPM_CMD! install
   IF !ERRORLEVEL! NEQ 0 goto error
@@ -100,7 +100,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
 )
  
 :: 3. Angular Prod Build
-IF EXIST "%DEPLOYMENT_SOURCE%/.angular-cli.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%\Landingpage/.angular-cli.json" (
 echo Building App in %DEPLOYMENT_SOURCE%…
 pushd "%DEPLOYMENT_SOURCE%"
 call :ExecuteCmd !NPM_CMD! run build
@@ -109,7 +109,7 @@ popd
 )
  
 :: 4. Copy Web.config
-IF EXIST "%DEPLOYMENT_SOURCE%\web.config" (
+IF EXIST "%DEPLOYMENT_SOURCE%\Landingpage\web.config" (
   pushd "%DEPLOYMENT_SOURCE%"
  :: the next line is optional to fix 404 error see section #8
   call :ExecuteCmd cp web.config dist\
